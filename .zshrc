@@ -23,6 +23,9 @@ export PATH=$RBENV_ROOT/shims:$PATH
 # Java
 export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
 
+# Android Studio
+export PATH=$PATH:$HOME/Library/Android/sdk/platform-tools
+
 # Go
 export PATH=$PATH:/usr/local/opt/go/libexec/bin
 export GOPATH=$HOME/.go
