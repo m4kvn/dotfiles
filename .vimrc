@@ -6,7 +6,7 @@ set shiftwidth=4
 set mouse=a
 set splitbelow
 set splitright
-
+set backspace=indent,eol,start
 
 highlight Comment ctermbg=blue ctermfg=white
 highlight ZenkakuOrTrailingSpace cterm=underline ctermfg=red
