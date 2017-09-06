@@ -1,1 +1,1 @@
-/Users/masahiro/.vimrc
+../../.vimrc
