@@ -7,7 +7,7 @@ export LC_CTYPE=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 
 # エディタを指定
-export EDITOR=nvim
+export EDITOR=vim
 export XDG_CONFIG_HOME=$HOME/.config
 
 # pyenvの設定
@@ -27,12 +27,6 @@ export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
 export GOPATH=$HOME/.go
 export PATH=$GOPATH/bin:$PATH
 
-# GAE
-source $HOME/google-cloud-sdk/completion.zsh.inc
-source $HOME/google-cloud-sdk/path.zsh.inc
-
-export LSCOLORS=hxfxcxdxbxegedabagacad
-
 # SDKMAN
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
@@ -44,7 +38,10 @@ export PATH="$PATH:$ANT_HOME/bin"
 # Powerline
 export PATH="$HOME/.local/bin:$PATH"
 powerline-daemon -q
-. $HOME/.local/lib/python3.5/site-packages/powerline/bindings/zsh/powerline.zsh
+. $PYENV_ROOT/versions/2.7.10/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh
+
+# その他
+export LSCOLORS=hxfxcxdxbxegedabagacad
 
 # -------------------------------------
 # 履歴
@@ -135,8 +132,6 @@ path=(
 # -------------------------------------
 # エイリアス
 # -------------------------------------
-
-alias vim="nvim"
 
 # -n 行数表示, -I バイナリファイル無視, svn関係のファイルを無視
 alias grep="grep --color -n -I --exclude='*.svn-*' --exclude='entries' --exclude='*/cache/*'"
