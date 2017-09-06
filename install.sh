@@ -32,4 +32,6 @@ if ! has "rbenv"; then
     brew install rbenv
 fi
 
-
+if ! has "tmux"; then
+    brew install tmux
+fi
