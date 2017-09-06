@@ -29,11 +29,17 @@ if ! has "pyenv"; then
     pyenv install 3.5.0
 fi
 
+# AWS
+if ! has "aws"; then
+    pip install awscli
+fi
+
 # Ruby
 if ! has "rbenv"; then
     brew install rbenv
 fi
 
+# tmux
 if ! has "tmux"; then
     brew install tmux
 fi
