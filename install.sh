@@ -25,6 +25,8 @@ if ! has "pyenv"; then
     pyenv install 2.7.10
     pyenv global system 2.7.10
     pip install --upgrade pip
+
+    pyenv install 3.5.0
 fi
 
 # Ruby
