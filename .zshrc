@@ -6,24 +6,24 @@
 export LC_CTYPE=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 
-# エディタを指定
+# editor
 export EDITOR=vim
 export XDG_CONFIG_HOME=$HOME/.config
 
-# pyenvの設定
+# pyenv
 export PYENV_ROOT=$HOME/.pyenv
 export PATH=$PYENV_ROOT/bin:$PATH
 eval "$(pyenv init -)"
 
-# rvenbの設定
+# rbenv
 eval "$(rbenv init -)"
 export RBENV_ROOT=$HOME/.rbenv
 export PATH=$RBENV_ROOT/shims:$PATH
 
-# javaの設定
+# Java
 export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
 
-# Goの設定
+# Go
 export PATH=$PATH:/usr/local/opt/go/libexec/bin
 export GOPATH=$HOME/.go
 export PATH=$GOPATH/bin:$PATH
@@ -40,6 +40,10 @@ export PATH="$PATH:$ANT_HOME/bin"
 export PATH="$HOME/.local/bin:$PATH"
 powerline-daemon -q
 . $PYENV_ROOT/versions/2.7.10/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh
+
+# less
+export LESS='-R'
+export LESSOPEN='| /usr/local/bin/src-hilite-lesspipe.sh %s'
 
 # その他
 export LSCOLORS=hxfxcxdxbxegedabagacad

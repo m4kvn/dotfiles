@@ -37,3 +37,13 @@ fi
 if ! has "tmux"; then
     brew install tmux
 fi
+
+# Go
+if ! has "go"; then
+    brew install go
+fi
+
+# lessに色付け用
+if ! has "source-highlight"; then
+    brew install source-highlight
+fi
