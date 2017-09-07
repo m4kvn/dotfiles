@@ -58,3 +58,18 @@ fi
 if ! has "powerline-daemon -h"; then
     pip install powerline-status
 fi
+
+# npm
+if ! has "npm"; then
+    brew install npm
+fi
+
+# jsonlint
+if ! has "jsonlint"; then
+    npm install jsonlint -g
+fi
+
+# jq
+if ! has "jq"; then
+    brew install jq
+fi
