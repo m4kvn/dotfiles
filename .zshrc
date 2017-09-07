@@ -40,7 +40,6 @@ export ANT_HOME="/usr/local/bin/ant/"
 export PATH="$PATH:$ANT_HOME/bin"
 
 # Powerline
-export PATH="$HOME/.local/bin:$PATH"
 powerline-daemon -q
 . $PYENV_ROOT/versions/2.7.10/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh
 

@@ -18,7 +18,7 @@ fi
 if ! has "pyenv"; then
     brew install pyenv
 
-    if has "python"; then
+    if has "python -V"; then
         brew uninstall --ignore-dependencies python
     fi
 
@@ -52,4 +52,9 @@ fi
 # lessに色付け用
 if ! has "source-highlight"; then
     brew install source-highlight
+fi
+
+# Powerline
+if ! has "powerline-daemon -h"; then
+    pip install powerline-status
 fi
