@@ -56,20 +56,30 @@ fi
 
 # Powerline
 if ! has "powerline-daemon -h"; then
+    echo "Installing powerline-status"
     pip install powerline-status
 fi
 
 # npm
 if ! has "npm"; then
+    echo "Installing npm"
     brew install npm
 fi
 
 # jsonlint
 if ! has "jsonlint"; then
+    echo "Installing jsonlint"
     npm install jsonlint -g
 fi
 
 # jq
 if ! has "jq"; then
+    echo "Installing jq"
     brew install jq
+fi
+
+# Docker for Mac
+if ! has "docker"; then
+    echo "Installing docker"
+    brew cask install docker
 fi
