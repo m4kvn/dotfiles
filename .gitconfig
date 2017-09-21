@@ -1,0 +1,16 @@
+[user]
+	name = manohito
+	email = fun.masahiro@gmail.com
+[core]
+	editor = vim -c \"set fenc=utf-8\"
+	precomposeunicode = true
+	quotepath = false
+	excludesfile = ~/.gitignore_global
+[color]
+	diff = auto
+	status = auto
+	branch = auto
+[commit]
+	template = ~/.stCommitMsg
+[http]
+	postBuffer = 524288000
