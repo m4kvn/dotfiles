@@ -157,6 +157,12 @@ alias doc-none="docker images | awk '/<none/{print $3}' | xargs docker rmi"
 # tree
 alias tree="tree -NC" # N: 文字化け対策, C:色をつける
 
+# gist
+alias gi="gist"
+
+# vim
+alias v="vim"
+
 # -------------------------------------
 # キーバインド
 # -------------------------------------
