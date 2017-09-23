@@ -83,3 +83,9 @@ if ! has "docker"; then
     echo "Installing docker"
     brew cask install docker
 fi
+
+# gist
+if ! has "gist"; then
+    echo "Installing gist"
+    brew install gist
+fi
