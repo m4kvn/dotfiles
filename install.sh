@@ -11,7 +11,18 @@ has() {
 
 # Homebrew
 if ! has "brew"; then
+    echo "Installing homebrew"
     /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+fi
+
+if ! has "git"; then
+    echo "Installing git"
+    brew install git
+fi
+
+if ! has "zsh"; then
+    echo "Installing zsh"
+    brew install zsh
 fi
 
 # Python
