@@ -10,8 +10,6 @@
 	diff = auto
 	status = auto
 	branch = auto
-[commit]
-	template = ~/.stCommitMsg
 [http]
     postBuffer = 524288000
 [alias]
