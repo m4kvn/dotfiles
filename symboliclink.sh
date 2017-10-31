@@ -1,4 +1,4 @@
-dotfileDir=`dirname $0`
+dotfileDir=$(cd $(dirname $0) && pwd)
 cd $HOME
 ln -s ${dotfileDir}/.tigrc
 ln -s ${dotfileDir}/.vimrc
