@@ -20,9 +20,6 @@ eval "$(rbenv init -)"
 export RBENV_ROOT=$HOME/.rbenv
 export PATH=$RBENV_ROOT/shims:$PATH
 
-# Java
-export JAVA_HOME=`/usr/libexec/java_home -v 1.9`
-
 # Android Studio
 export PATH=$PATH:$HOME/Library/Android/sdk/platform-tools
 
