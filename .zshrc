@@ -47,6 +47,12 @@ powerline-daemon -q
 export LESS='-R'
 export LESSOPEN='| /usr/local/bin/src-hilite-lesspipe.sh %s'
 
+# nvm
+[[ -s ~/.nvm/nvm.sh ]] && . ~/.nvm/nvm.sh
+nvm use default
+npm_dir=${NVM_PATH}_modules
+export NODE_PATH=$npm_dir
+
 # その他
 export LSCOLORS=hxfxcxdxbxegedabagacad
 
@@ -191,7 +197,7 @@ function chpwd() { ls }
 
 # run tmux
 # if [[ ! -n $TMUX && $- == *l* ]]; then
-  # get the IDs
+#   get the IDs
 #   ID="`tmux list-sessions`"
 #   if [[ -z "$ID" ]]; then
 #     tmux new-session
