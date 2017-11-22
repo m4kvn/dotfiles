@@ -25,6 +25,12 @@ if ! has "zsh"; then
     brew install zsh
 fi
 
+if ! has "nvm"; then
+    echo "Installing zsh"
+    brew install nvm
+    mkdir ~/.nvm
+fi
+
 # Python
 if ! has "pyenv"; then
     brew install pyenv
