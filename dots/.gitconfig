@@ -1,5 +1,5 @@
 [user]
-	name = manohito
+	name = m4kvn
 	email = fun.masahiro@gmail.com
 [core]
 	editor = vim -c \"set fenc=utf-8\"
@@ -11,9 +11,14 @@
 	status = auto
 	branch = auto
 [http]
-    postBuffer = 524288000
+	postBuffer = 524288000
 [alias]
-    graph = log --graph --date-order -C -M --pretty=format:\"<%h> %ad [%an] %Cgreen%d%Creset %s\" --all --date=short
 	s = status
 	a = add
+	aa = add -A
 	cm = commit
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
