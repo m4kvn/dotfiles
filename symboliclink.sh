@@ -1,8 +1,2 @@
 dotfileDir=$(cd $(dirname $0) && pwd)
-cd $HOME
-ln -s ${dotfileDir}/.tigrc
-ln -s ${dotfileDir}/.vimrc
-ln -s ${dotfileDir}/.zshrc
-ln -s ${dotfileDir}/.gitconfig
-ln -s ${dotfileDir}/.gitignore_global
-ln -s ${dotfileDir}/.tmux.conf
+cd $HOME && ls -A ${dotfileDir}/dots | xargs -I{} ln -s ${dotfileDir}/dots/{}
