@@ -7,3 +7,9 @@ fi
 if [ -s /Users/m4kvn/git/m4kvn/scripts ]; then
     source /Users/m4kvn/git/m4kvn/scripts/profile
 fi
+
+# rbenv settings
+if [ -s ~/.rbenv ]; then
+    export PATH=${HOME}/.rbenv/bin:$PATH
+    eval "$(rbenv init -)"
+fi
