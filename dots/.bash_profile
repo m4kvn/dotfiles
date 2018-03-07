@@ -1,15 +1,17 @@
 
-if [[ -s ~/Library/Android/sdk/platform-tools ]]; then
+# adb
+if [ -s ~/Library/Android/sdk/platform-tools ]; then
     export PATH=~/Library/Android/sdk/platform-tools:$PATH
 fi
 
-# Auto setting by github.com/m4kvn/scripts
-if [ -s /Users/m4kvn/git/m4kvn/scripts ]; then
-    source /Users/m4kvn/git/m4kvn/scripts/profile
+# rbenv
+if [ -s ~/.rbenv ]; then
+    export PATH=$HOME/.rbenv/bin:$PATH
+    eval "$(rbenv init -)"
 fi
 
-# rbenv settings
-if [ -s ~/.rbenv ]; then
-    export PATH=${HOME}/.rbenv/bin:$PATH
-    eval "$(rbenv init -)"
+# nvm
+if [ -s $HOME/.nvm ]; then
+    export NVM_DIR="$HOME/.nvm"
+    [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 fi
