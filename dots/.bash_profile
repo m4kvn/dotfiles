@@ -1,4 +1,9 @@
 
+# scripts
+if [ -s $HOME/.scripts ]; then
+    export PATH=$HOME/.scripts/bin:$PATH
+fi
+
 # adb
 if [ -s ~/Library/Android/sdk/platform-tools ]; then
     export PATH=~/Library/Android/sdk/platform-tools:$PATH
