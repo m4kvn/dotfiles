@@ -34,7 +34,8 @@ fi
 zplug load
 
 # prompt
-PROMPT='%F{white}%* '$PROMPT
+#PROMPT='%F{white}%* '$PROMPT
+PROMPT='%(12V.%F{242}%12v%f .)%(?.%F{magenta}.%F{red})${PURE_PROMPT_SYMBOL:-❯❯❯❯ }%f'
 
 # alias
 alias ls="ls -G"
