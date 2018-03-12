@@ -1,6 +1,10 @@
 #!/bin/sh
 
 dir=$HOME/.dotfiles
-[ -d "$dir" ] && echo "$dir is already exists" && exit 1
-git clone https://github.com/m4kvn/dotfiles.git $dir
+
+if [ -d "$dir" ]; then
+    cd $dir && git fetch && git pull origin master
+else
+    git clone https://github.com/m4kvn/dotfiles.git $dir
+fi
 sh $dir/symboliclink.sh
