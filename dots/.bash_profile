@@ -21,3 +21,10 @@ if [ -s ~/.pyenv ]; then
     export PATH=$PYENV_ROOT/bin:$PATH
     eval "$(pyenv init -)"
 fi
+
+# goenv
+if [ -s ~/.goenv ]; then
+    export GOENV_ROOT=~/.goenv
+    export PATH=$GOENV_ROOT/bin:$PATH
+    eval "$(goenv init -)"
+fi
