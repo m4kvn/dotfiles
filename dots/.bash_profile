@@ -1,7 +1,7 @@
 
 # scripts
-if [ -s $HOME/.scripts ]; then
-    export PATH=$HOME/.scripts/bin:$PATH
+if [ -s ~/.scripts ]; then
+    export PATH=~/.scripts/bin:$PATH
 fi
 
 # adb
@@ -11,19 +11,19 @@ fi
 
 # rbenv
 if [ -s ~/.rbenv ]; then
-    export PATH=$HOME/.rbenv/bin:$PATH
+    export PATH=~/.rbenv/bin:$PATH
     eval "$(rbenv init -)"
 fi
 
 # pyenv
 if [ -s ~/.pyenv ]; then
-    export PYENV_ROOT=$HOME/.pyenv
+    export PYENV_ROOT=~/.pyenv
     export PATH=$PYENV_ROOT/bin:$PATH
     eval "$(pyenv init -)"
 fi
 
 # nvm
-if [ -s $HOME/.nvm ]; then
-    export NVM_DIR="$HOME/.nvm"
+if [ -s ~/.nvm ]; then
+    export NVM_DIR="~/.nvm"
     [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 fi
