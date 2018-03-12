@@ -41,6 +41,7 @@ PROMPT='%(12V.%F{242}%12v%f .)%(?.%F{magenta}.%F{red})${PURE_PROMPT_SYMBOL:-‚ùØ‚
 alias ls="ls -G"
 alias ll="ls -lh"
 alias la="ls -la"
+alias g="git"
 
 # import path from bash
 setopt no_global_rcs
