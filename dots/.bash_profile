@@ -28,3 +28,9 @@ if [ -s ~/.goenv ]; then
     export PATH=$GOENV_ROOT/bin:$PATH
     eval "$(goenv init -)"
 fi
+
+# ndenv
+if [ -s ~/.ndenv ]; then
+    export PATH=$HOME/.ndenv/bin:$PATH
+    eval "$(ndenv init -)"
+fi
