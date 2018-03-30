@@ -1,10 +1,14 @@
 #!/bin/sh
 
-dir=$HOME/.dotfiles
-
-if [ -d "$dir" ]; then
-    cd $dir && git fetch && git pull origin master
-else
-    git clone https://github.com/m4kvn/dotfiles.git $dir
+if [ ! -n "$DOTFILES_ROOT" ]; then
+    printf '[dotfiles]\e[31m $DOTFILES_ROOT is not found.\n\e[m'
+    exit 1
 fi
-sh $dir/symboliclink.sh
+
+if [ -s $DOTFILES_ROOT ]; then
+    printf "[dotfiles]\e[31m $DOTFILES_ROOT is already exists.\n\e[m"
+    exit 1
+fi
+
+git clone https://github.com/m4kvn/dotfiles.git $DOTFILES_ROOT
+. $DOTFILES_ROOT/symboliclink.sh

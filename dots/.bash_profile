@@ -1,4 +1,6 @@
 
+export DOTFILES_ROOT=~/.dotfiles
+
 # scripts
 if [ -s ~/.scripts ]; then
     export PATH=~/.scripts/bin:$PATH

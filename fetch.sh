@@ -10,5 +10,4 @@ if [ ! -s $DOTFILES_ROOT ]; then
     exit 1
 fi
 
-cd $HOME && find $DOTFILES_ROOT/dots -type f | xargs -I{} ln -fs {} 2>/dev/null
-exit 0
+cd $DOTFILES_ROOT && git fetch
